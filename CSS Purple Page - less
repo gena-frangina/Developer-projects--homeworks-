@@ -1,0 +1,176 @@
+.linear-gradient(@from-color,@from-pos,@to-color,@to-pos,@repeat: no-repeat){
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+
+background: -moz-linear-gradient(top,  #d593ff 13%, #c68cf2 17%, #a439f4 26%, #8f1aef 31%, #9215f2 34%, #9215f2 100%) fixed; /* FF3.6+ */
+background: -webkit-gradient(linear, top, color-stop(@from-pos,@from-color), color-stop(@to-pos,@to-color));
+background: -webkit-linear-gradient(top, @from-color @from-pos,@to-color @to-pos);
+background-repeat: @repeat;
+/*background: -o-linear-gradient(top,  #d593ff 13%,#c68cf2 17%,#a439f4 26%,#8f1aef 31%,#9215f2 34%,#9215f2 100%) fixed; /* Opera 11.10+ 
+background: -ms-linear-gradient(top,  #d593ff 13%,#c68cf2 17%,#a439f4 26%,#8f1aef 31%,#9215f2 34%,#9215f2 100%) fixed; /* IE10+
+background: linear-gradient(to bottom,  #d593ff 13%,#c68cf2 17%,#a439f4 26%,#8f1aef 31%,#9215f2 34%,#9215f2 100%) fixed; /* W3C
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d593ff', endColorstr='#9215f2',GradientType=0 ) fixed; /* IE6-8
+*/}
+body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+margin: 0;
+padding: 0;
+border: 0;
+}
+body
+{
+width: 100%;
+color: white;
+font: 14px normal Arial;
+@default-bg-color: #9215f2; /* Old browsers */
+background-color: @default-bg-color; 
+@nav-from-bg-color: #d593ff;
+.linear-gradient(@nav-from-bg-color,0%,@default-bg-color,25%,no-repeat);
+  a{
+   &:hover{
+        text-decoration: underline;
+  	}
+  }
+  footer{
+  	p{
+  	clear:both;
+  	font-size: 1.2em;
+  	font-weight: bold;
+  	text-align: center;
+  	}
+  }
+
+}
+#reg-form-container{
+float: right;
+margin: 20px 40px;
+position: relative;
+}
+
+input{
+  border: 1px solid gray;
+  border-radius: 10px;
+  height: 20px;
+  margin: 5px;
+  background: #b35ef3;
+}
+#btn-register{
+  border: 1px solid gray;
+  border-style: outset;
+  background: #b35ef3;
+  border-radius: 10px;
+  width: 85px;
+  height: 30px;
+  color: white;
+}
+
+#logo-container{
+img
+{
+border:none; 
+outline:none;
+}
+float: left;
+margin: 25px;
+}
+#header-container{
+height: 100px;
+}
+nav{
+  	margin: 70px 25px 25px;
+  	width: 80%;
+  	display: block;
+  #main-nav-list{
+  	border: solid black 1px;
+  	border-radius: 13px;
+  	overflow: hidden;
+  		li{
+  			float: left;
+  			list-style: none;
+  			padding-left: 15px;
+  			padding-top: 10px;
+  			a{
+  			padding-left: 10px;
+  			font: 1.4em normal Arial;
+  			text-decoration: none;
+  			text-aling: left;
+  			color: #fff;
+
+  			}
+  			ul{
+  			max-width: 250px;
+  			position: absolute;
+  			background-color: #d4a3f7;
+  			border-radius: 5px;			
+  			display: none;
+  				li{
+  				float: none;
+  				margin: 0 15px;
+  				padding: 10px 0;
+  				border-bottom: 1px solid black;
+  				}
+  			}
+  		&:hover ul{
+  		display: block;
+  		}
+  		}
+  	}
+}
+p{
+  a{
+  text-decoration: none;
+  color: #ccccd1;
+  }
+}
+section{
+  width: 70%;
+  overflow: hidden;
+  float: left;
+  	article{
+  		border: solid black 1px;
+  		border-radius: 13px;
+  		display: inline-block;
+  		margin: 20px;
+  		padding: 25px;
+  		footer{
+  			p
+  			{
+  				float: right;
+  				font-size: 1em;
+  				font-weight: normal;
+  			}
+  			a{
+  			text-decoration: none;
+  			color: #d4a3f7;
+  			}
+  		}
+  	}
+}
+
+aside{
+float: left;
+width: 300px;
+padding: 5px;
+  ul{
+  	list-style: none;
+  	li{
+  	border: solid black 1px;
+  	border-radius: 6px;
+  	margin: 10px;
+  	padding: 10px;
+  	h2{
+  	display: block;
+  	font-size: 1.2em;
+  	padding: 10px;
+  	}
+  		ul{
+  		clear: both;
+  			li{	
+  			padding: 0px;
+  			margin: 5px;
+  			border: none;
+  			background: url('http://genafrangina.files.wordpress.com/2013/02/li-dot.png') 0 4px no-repeat;
+  			padding-left: 30px;
+  			}
+  		}
+  	}
+  }
+}
