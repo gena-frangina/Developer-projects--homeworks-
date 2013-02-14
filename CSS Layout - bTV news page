@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Layout Homework 6 bTV news</title>
+    <meta charset="windows-1251" />
+    <meta http-equiv="content-language" content="bg" />
+    <style>
+  .clearfix {
+    zoom:1;
+  }
+  .clearfix:after {
+    content: "";
+    height:0;
+    display:block;
+    clear:both;
+  }
+  section, header, aside, nav, div, img, p, ul {
+    margin:0;
+    padding:0;
+  }
+  body {
+    font-family:Helvetica,Tahoma, sans-serif;
+    font-size:1em;
+    line-height:20px;
+    background-color:#9fa4a3;
+    color:#9fa4a3;
+  }
+  .frame {
+    position: relative;
+    width: 670px;
+    margin: auto;
+    background-color: #1E3741;
+    border: 1px outset #00968c;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+    box-shadow: 5px 5px 5px #1E3741;
+        -moz-box-shadow: 5px 5px 5px #1E3741;
+        -webkit-box-shadow: 5px 5px 5px #1E3741;
+    
+  }
+  .wrapper {
+    position:relative;
+    height:357px;
+    width:100%;
+    margin-top:15px;
+  }
+  aside {
+    float:left;
+    width:38%;
+  }
+  section.content {
+    float:left;
+    width:384px;
+    height:282px;
+  }
+    nav ul li {
+        list-style-type:none;
+        float:left;
+        display:block;
+        text-align:center;
+        background-color:#4b5f67;
+        padding:0;
+        margin:5px 1px 5px 0; 
+    }
+    nav a {
+        text-decoration:none;
+        color:#9fa4a3;
+        display:block;
+        padding:10px;
+        font-size:0.9em;
+    }
+        nav a:link {
+            text-decoration:none;
+            color:#9fa4a3;    
+        }
+        nav a:hover {
+            text-decoration:underline;
+            color:#fff;    
+        }
+        nav a:active {
+            text-decoration:underline;
+            color:#1E3741;    
+        }
+    nav #selected {
+        background-color:#1E3741;
+    }
+        nav #selected a {
+            color:#fff;
+        }
+  aside #selected-news {
+    background-color:#00968c;
+  }
+    aside #selected-news a {
+        color:#fff;
+    }
+  aside ul li {
+    list-style-type:none;
+    display:block;
+    padding:10px;
+    border-bottom:1px solid #4b5f67;
+  }
+    aside ul li:last-of-type {
+        border-bottom:none;
+    }
+    aside a {
+        text-decoration:none;
+        color:#9fa4a3;
+        font-size:0.9em;
+    }
+    aside a:link {
+        text-decoration:none;
+        color:#9fa4a3;
+    }
+    aside a:hover {
+        text-decoration:none;
+        
+    }
+    aside ul li:hover {
+        background-color:#00968c;
+        cursor:pointer;
+    }
+    aside ul li:hover a {
+        color:#fff;
+    }
+
+    </style>
+</head>
+<body>
+    <section class="frame">
+        <header>
+            <nav class="clearfix">
+                <ul>
+                    <li id="selected">
+                        <a href="#">Новините</a>
+                    </li>
+                    <li>
+                        <a href="#">Спорт</a>
+                    </li>
+                    <li>
+                        <a href="#">Емисии</a>
+                    </li>
+                    <li>
+                        <a href="#">Любопитно</a>
+                    </li>
+                    <li>
+                        <a href="#">Аз, репортерът</a>
+                    </li>
+                    <li>
+                        <a href="#">Тази сутрин</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="wrapper">
+            <aside>
+                <article>
+                    <ul>
+                        <li id="selected-news"><a href="#">Интернет новини - <time>13.07.2010 г.</time></a></li>
+                        <li><a href="#">Проливни дъждове в Дания, Китай и Индия, необичайни горещини в Иран.</a></li>
+                        <li><a href="#">Над 200 хектара горят на територията на бивш военен полигон в Германия.</a></li>
+                        <li><a href="#">23-ма ранени при сблъсък на два пътнически влака в Полша.</a></li>
+                        <li><a href="#">Диференцират от догодина минималният осигурителен доход за самоосигуряващите се.</a></li>
+                    </ul>
+                </article>
+            </aside>
+            <section class="content">
+                <img src="http://genafrangina.files.wordpress.com/2013/02/btv.png" class="clearfix" />
+            </section>
+        </section>
+    </section>
+</body>
+</html>
