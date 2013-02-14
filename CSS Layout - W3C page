@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS Layout Homework 4 CSS page</title>
+  <style>
+  body {
+    font-size: 12px;
+    font-family: verdana,helvetica,arial,sans-serif;
+    padding: 5px;
+    margin: 0px;
+    background: #F1F1F1;
+}
+
+.page {
+    margin: auto;
+    width: 910px;
+}
+
+.home {
+    float: left;
+    width: 140px;
+}
+
+    .home img {
+        padding-top: 10px;
+  	padding-bottom: 0px;
+        padding-left: 3px;
+    }
+
+    .home > a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .home nav ul {
+        padding: 0px;
+        padding-left: 3px;
+        margin: 17px 0px;
+    }
+
+        .home nav ul li {
+            list-style-type: none;
+        }
+
+            .home nav ul li a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            .home nav ul li:first-of-type a {
+                color: #ce0000;
+                font-weight: bold;
+            }
+
+section {
+    background: #fff;
+    display: block;
+    float: left;
+    border: 1px solid #000;
+    padding: 2px 5px 0px 5px;
+    margin: 2px 0px 0px 15px;
+    width: 550px;
+    height: 630px;
+}
+
+    section header h1 {
+        font-size: 21px;
+    }
+
+    section header hr, section footer hr {
+        margin: 10px 0px;
+    }
+
+    section header a, section footer a.back, section footer a.next {
+        text-decoration: none;
+        color: #000;
+        border: 2px groove #000;
+    }
+
+        section header a.back, section footer a.back {
+            background: url(img/stock_data_previous.png) no-repeat;
+            padding: 1px 30px;
+        }
+
+        section header a.next, section footer a.next {
+            background: url(img/stock_data_next.png) no-repeat right;
+            padding: 1px 42px;
+        }
+
+article {
+    margin-bottom: 20px;
+}
+
+    article header h2 {
+        background: #808080;
+        color: #fff;
+        font-size: 14px;
+        padding-left: 3px;
+    }
+
+    article img {
+        float: left;
+        margin-right: 15px;
+    }
+
+    article p.bold {
+        font-weight: bold;
+    }
+
+    article p {
+        padding: 0px 5px;
+        margin-bottom: 10px;
+    }
+
+    article footer a, aside ul li a {
+        color: #ce0000;
+    }
+
+aside {
+    float: left;
+    width: 183px;
+    margin-left: 3px;
+}
+
+    aside article {
+        background: #FFF;
+        border: 1px solid #000;
+        padding: 0px;
+        margin: 2px 0px;
+    }
+
+        aside article header h4 {
+            background: #808080;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            margin: 0px;
+        }
+
+        aside article input.search {
+            width: 60%;
+            margin: 5px 3px 3px 20px;
+            border: 1px solid #808080;
+        }
+
+        aside article input.submit {
+            width: 22px;
+            height: 20px;
+            font-weight: bold;
+            background: #fff;
+            border: 1px solid #808080;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        aside article a.button {
+            display: block;
+            border: 1px solid #6faec3;
+            color: #3BCCFE;
+            width: 110px;
+            margin: 3px auto;
+            font-size: 12px;
+            font-family: verdana,helvetica,arial,sans-serif;
+            text-align: center;
+            line-height: 30px;
+            background: rgb(200,238,255); /* Old browsers */
+            background: -moz-linear-gradient(left, rgba(200,238,255,1) 0%, rgba(182,226,249,1) 4%, rgba(212,240,254,1) 12%, rgba(212,240,254,1) 88%, rgba(182,226,249,1) 96%, rgba(200,238,255,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(200,238,255,1)), color-stop(4%,rgba(182,226,249,1)), color-stop(12%,rgba(212,240,254,1)), color-stop(88%,rgba(212,240,254,1)), color-stop(96%,rgba(182,226,249,1)), color-stop(100%,rgba(200,238,255,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(left, rgba(200,238,255,1) 0%,rgba(182,226,249,1) 4%,rgba(212,240,254,1) 12%,rgba(212,240,254,1) 88%,rgba(182,226,249,1) 96%,rgba(200,238,255,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(left, rgba(200,238,255,1) 0%,rgba(182,226,249,1) 4%,rgba(212,240,254,1) 12%,rgba(212,240,254,1) 88%,rgba(182,226,249,1) 96%,rgba(200,238,255,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(left, rgba(200,238,255,1) 0%,rgba(182,226,249,1) 4%,rgba(212,240,254,1) 12%,rgba(212,240,254,1) 88%,rgba(182,226,249,1) 96%,rgba(200,238,255,1) 100%); /* IE10+ */
+            background: linear-gradient(to right, rgba(200,238,255,1) 0%,rgba(182,226,249,1) 4%,rgba(212,240,254,1) 12%,rgba(212,240,254,1) 88%,rgba(182,226,249,1) 96%,rgba(200,238,255,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8eeff', endColorstr='#c8eeff',GradientType=1 ); /* IE6-9 */
+        }
+
+    aside ul {
+        padding: 5px 0px;
+        margin: 0px;
+        text-align: center;
+    }
+
+        aside ul li {
+            list-style-type: none;
+        }
+
+         
+  </style>
+</head>
+<body>
+    <div class="page">
+        <div class="home">
+            <img src="http://genafrangina.files.wordpress.com/2013/02/home.png" />
+            <a href="#">HOME</a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">CSS Basic</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Introduction</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Syntax</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS How To</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Background</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Text</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Font</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Border</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Outline</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Margin</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Pedding</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS List</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Table</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">CSS Advanced</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Dimension</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Classification</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Positioning</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Pseudo-class</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Pseudo-element</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Image Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Image Opasity</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Don`t</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Summary</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">CSS Examples</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Examples</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">References</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS2 Reference</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS2 Print</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS2 Aural</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Units</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Colors</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Colorvalues</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Colornames</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">CSS Quiz</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Quiz</a>
+                    </li>
+                    <li>
+                        <a href="#">CSS Exam</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <section>
+            <header>
+                <h1>CSS Tutorial</h1>
+                <a href="#" class="back">Previous</a>
+                <a href="#" class="next">Next</a>
+                <hr />
+            </header>
+                <article>
+                    <header>
+                        <h2>CSS Tutorial</h2>
+                    </header>
+                    <img src="http://genafrangina.files.wordpress.com/2013/02/css.png" />
+                    <p class="bold">Save a lot of work with CSS!</p>
+                    <p class="bold">In our CSS tutorial you will learn how to use CSS to control the style and layout ot multiple Web pages all at once.</p>
+                    <footer>
+                    <a href="#">Start learning CSS!</a>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h2>CSS Examples</h2>
+                    </header>
+                    <p>Learn by 70 examples! With our editor, you can edit CSS, and click on a test button to view the result.</p>
+                    <footer>
+                    <a href="#">Try-It-Yourself!</a>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h2>CSS Reference</h2>
+                    </header>
+                    <p>At W3Schools you will find a complete CSS2 reference, listing properties, units of measurements, colors, and more.</p>
+                    <footer>
+                    <a href="#">CSS2 Reference</a>
+                    </footer>
+                </article>
+                <article>
+                    <header>
+                        <h2>CSS Quiz Test</h2>
+                    </header>
+                    <p>Test your CSS skills at W#Schools!</p>
+                    <footer>
+                    <a href="#">Start CSS Quiz!</a>
+                    </footer>
+                </article>
+            <footer>
+                <hr />
+                <a href="#" class="back">Previous</a>
+                <a href="#" class="next">Next</a>
+                <hr />
+            </footer>
+        </section>
+        <aside>
+            <form>
+            <article>
+                <header>
+                    <h4>SITE SEARCH</h4>
+                </header>
+                    <input type="search" class="search"/>
+                    <input type="submit" name="search" value="..." class="submit"/>
+                    <ul>
+                        <li>
+                            <a href="#">About W3Schools</a>
+                        </li>
+                        <li>
+                            <a href="#">W3Schools Forum</a>
+                        </li>
+                    </ul>
+            </article>
+            <article>
+                <a class="button" >25+ Styles!</a>
+                <ul>
+                    <li>
+                        <a href="#">Dynamic button image generation</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <header>
+                    <h4>WEB HOSTING</h4>
+                </header>
+                <ul>
+                    <li>
+                        <a href="#">$15 Domain Name</a>
+                    </li>
+                    <li>
+                        <a href="#">Registration</a>
+                    </li>
+                    <li>
+                        <a href="#">Save $20 / year!</a>
+                    </li>
+                </ul>
+
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">UK Domain Names</a>
+                    </li>
+                    <li>
+                        <a href="#">UK Web Hosting</a>
+                    </li>
+                    <li>
+                        <a href="#">Alojamiento Web</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Buy UK Domain Names</a>
+                    </li>
+                    <li>
+                        <a href="#">Register Domain Names</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Cheap Domain Names</a>
+                    </li>
+                    <li>
+                        <a href="#">Cheap Web Hosting</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Best Web Hosting</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Domain Name</a>
+                    </li>
+                    <li>
+                        <a href="#">Registration</a>
+                    </li>
+                 </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">PHP MySQL Hosting</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Top 10 Web Hosting</a>
+                    </li>
+                 </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Web Hosting Providers</a>
+                    </li>
+                 </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Web Hosting Company</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">Web Hosting Reviews</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <li>
+                        <a href="#">UK Web Hosting</a>
+                    </li>
+                </ul>
+            </article>
+            </form>
+        </aside>
+    </div>
+</body>
+</html>
