@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+  	<title>CSS Layout Homework 5 Laptops</title>
+  	<style> 
+  	body, section,aside,div ,ul,li, h2{
+  margin:0;
+  padding:0;
+}
+  body{
+  width:742px;
+  height:578px;
+  margin:5px 0 0 5px;
+  font-family: Corbel,sans-serif;
+  font-size:1.1em;
+  }
+  
+ul{
+  list-style-type:none
+}  
+nav {
+  text-align:center;
+}
+
+nav  li{
+  display:inline;
+  margin-left:5px;
+}
+
+nav a{
+  color:#00aef0;
+  font-size:1.6em;
+  font-weight:bold;
+}
+
+hr{
+  width:95%;
+  border-color:black;
+}
+
+section{
+  width:552px;
+  height:490px;
+  border:2px solid black;
+  margin:5px;
+  padding-top:5px;
+  float:left;
+}
+
+section ul{ 
+  margin-top:40px;
+  margin-right:5px;
+  float:right;
+  }
+section li{  
+  line-height:170%;
+}
+
+h2{
+  background-color:white;
+  font-size:1.1em;
+  font-weight:normal;
+  margin-top: -13px;
+  margin-left:40px;	
+  padding-left:8px;
+  width:160px;
+}
+
+section span{
+  margin-top:104px;
+  margin-left:50px;
+  float:left;
+  }
+
+div.box{
+  background:url(http://genafrangina.files.wordpress.com/2013/02/apple.png) 15px 15px no-repeat;
+  width:260px;
+  height:145px;
+  float:left;
+  border:2px solid black;
+  margin:6px;
+  margin-left:3px;
+}
+
+aside{
+  float:left;
+  width:165px;
+  margin-top:90px;
+  margin-left:8px;
+}
+
+input{
+  margin:20px 0 20px 5px;
+}
+label{
+  font-size:1.1em;
+}
+
+  	</style> 
+  </head>
+  <body>
+  	<nav>
+  		<ul>
+  			<li><a href="#">Apple</a></li>
+  			<li><a href="#">Toshiba</a></li>
+  			<li><a href="#">Lenovo</a></li>
+  			<li><a href="#">Dell</a></li>
+  			<li><a href="#">Assus</a></li>
+  			<li><a href="#">Acer</a></li>
+  			<li><a href="#">HP</a></li>
+  		</ul>			
+  	</nav>
+  	<hr/>
+  	<section>			
+  		<div class="box">
+  			<h2>Apple MacBook Air</h2>
+  			<ul>
+  				<li>64GB SSD</li>
+  				<li>2GB DDR</li>
+  				<li>Intel Core i5</li>					
+  			</ul>
+  			<span>1300 USD</span>
+  		</div>
+  		<div class="box">
+  			<h2>Apple MacBook Air</h2>					
+  			<ul>
+  				<li>64GB SSD</li>
+  				<li>2GB DDR</li>
+  				<li>Intel Core i5</li>
+  			</ul>
+  			<span>1300 USD</span>
+  		</div>			
+  		<div class="box">
+  			<h2>Apple MacBook Air</h2>					
+  			<ul>
+  				<li>64GB SSD</li>
+  				<li>2GB DDR</li>
+  				<li>Intel Core i5</li>
+  			</ul>
+  			<span>1300 USD</span>
+  		</div>			
+  		<div class="box">
+  			<h2>Apple MacBook Air</h2>				
+  			<ul>
+  				<li>64GB SSD</li>
+  				<li>2GB DDR</li>
+  				<li>Intel Core i5</li>
+  			</ul>
+  			<span>1300 USD</span>
+  		</div>			
+  		<div class="box">
+  			<h2>Apple MacBook Air</h2>					
+  			<ul>
+  				<li>64GB SSD</li>
+  				<li>2GB DDR</li>
+  				<li>Intel Core i5</li>
+  			</ul>
+  			<span>1300 USD</span>
+  		</div>			
+  		<div class="box">
+  			<h2>Apple MacBook Air</h2>					
+  			<ul>
+  				<li>64GB SSD</li>
+  				<li>2GB DDR</li>
+  				<li>Intel Core i5</li>
+  			</ul>
+  			<span>1300 USD</span>				
+  		</div>		
+  	</section>
+  	<aside>
+  		<form>
+  			<label>Min price: 500 USD</label>
+  			<input type="range" min="0" max="1000" value="500" />
+  			<label>Max price: 1500 USD</label>
+  			<input type="range" min="1000" max="2000" value="1500" />
+  			<label>Min RAM: 4GB</label>
+  			<input type="range" min="0" max="8" value="4" />
+  			<label>Max RAM: 16GB</label>
+  			<input type="range" min="0" max="32" value="16" />
+  		</form>
+  	</aside>
+  </body>
+</html>
