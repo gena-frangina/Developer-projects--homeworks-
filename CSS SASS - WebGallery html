@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Gallery</title>
+        <link href="style/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <form>
+            <div class="mini-gallery">
+                <ul>
+                    <li>
+                    <label for="radioOne" ><img src="http://genafrangina.files.wordpress.com/2013/02/image1.jpg" width="200px" height="150px" /></label>
+                    </li>
+                     <li>
+                    <label for="radioTwo" ><img src="http://genafrangina.files.wordpress.com/2013/02/image2.jpg" width="200px" height="150px" /></label>
+                    </li>
+                     <li>
+                    <label for="radioThree" ><img src="http://genafrangina.files.wordpress.com/2013/02/image3.jpg" width="200px" height="150px" /></label>
+                    </li>
+                     <li>
+                    <label for="radioFour" ><img src="http://genafrangina.files.wordpress.com/2013/02/image4.jpg" width="200px" height="150px" /></label>
+                    </li>
+                     <li>
+                    <label for="radioFive" ><img src="http://genafrangina.files.wordpress.com/2013/02/image5.jpg" width="200px" height="150px" /></label>
+                    </li>
+  				<li>
+                    <label for="radioSix" ><img src="http://genafrangina.files.wordpress.com/2013/02/image6.jpg" width="200px" height="150px" /></label>
+                    </li>
+  		
+                </ul>
+            </div>
+            <div class="large-gallery">
+                
+  	<input type="radio" id="radioSix" name="RadioButtons" checked="checked"/>
+                <img class="hidden" src="http://genafrangina.files.wordpress.com/2013/02/image6.jpg" width="450px" height="350px"/>
+  			
+                <input type="radio" id="radioFive" name="RadioButtons"/>
+                <img class="hidden" src="http://genafrangina.files.wordpress.com/2013/02/image5.jpg" width="450px" height="350px"/>
+               
+                <input type="radio" id="radioFour" name="RadioButtons"/>
+                <img class="hidden" src="http://genafrangina.files.wordpress.com/2013/02/image4.jpg" width="450px" height="350px"/>
+              
+                <input type="radio" id="radioThree" name="RadioButtons"/>
+                <img class="hidden" src="http://genafrangina.files.wordpress.com/2013/02/image3.jpg" width="450px" height="350px"/>
+                
+                <input type="radio" id="radioTwo" name="RadioButtons"/>
+                <img class="hidden" src="http://genafrangina.files.wordpress.com/2013/02/image2.jpg" width="450px" height="350px"/>
+                                  			
+  			<input type="radio" id="radioOne" name="RadioButtons" checked="checked"/>
+                <img class="hidden" src="http://genafrangina.files.wordpress.com/2013/02/image1.jpg" width="450px" height="350px"/>
+            </div>
+        </form>
+    </body>
+</html>
