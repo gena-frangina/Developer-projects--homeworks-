@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Calculator</title>
+  	<style>
+  .border {
+  border: 1px solid #729090;
+  border-radius: 3px;
+  }
+  #Calculator {
+  margin: 0 auto;
+  font-family: Segoe UI;
+  font-size: 12px;
+  background: url('http://genafrangina.files.wordpress.com/2013/02/bg.png') no-repeat 7px 0;
+  background-color: #D2E8FE;
+  width: 415px;
+  height: 350px;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px #000;
+  padding: 25px 7px 27px 7px;
+  cursor: default;
+  }
+ #inner {
+  border: 1px solid #729090;
+  height: 103%;
+  background: #005200; /* Old browsers */
+  background: -moz-linear-gradient(top,  #005200 0%, #d9e4f1 28%, #CCFF33 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005200), color-stop(28%,#d9e4f1), color-stop(100%,#CCFF33)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #005200 0%,#d9e4f1 28%,#CCFF33 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #005200 0%,#d9e4f1 28%,#CCFF33 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #005200 0%,#d9e4f1 28%,#CCFF33 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #005200 0%,#d9e4f1 28%,#CCFF33 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005200', endColorstr='#CCFF33',GradientType=0 ); /* IE6-9 */
+  color: #1E395B;
+}
+#title {
+  margin: 0 0 5px 18px;
+}
+ul#menu li {
+  padding: 0;
+  list-style: none;
+  display: inline;
+  margin-left: 7px;
+  color: #111;
+}
+ul#menu {
+  background: #fcfdfe; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fcfdfe 1%, #fcfdfe 12%, #d7def0 44%, #d7def0 56%, #d7def0 56%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#fcfdfe), color-stop(12%,#fcfdfe), color-stop(44%,#d7def0), color-stop(56%,#d7def0), color-stop(56%,#d7def0)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #fcfdfe 1%,#fcfdfe 12%,#d7def0 44%,#d7def0 56%,#d7def0 56%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #fcfdfe 1%,#fcfdfe 12%,#d7def0 44%,#d7def0 56%,#d7def0 56%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #fcfdfe 1%,#fcfdfe 12%,#d7def0 44%,#d7def0 56%,#d7def0 56%); /* IE10+ */
+  background: linear-gradient(to bottom,  #fcfdfe 1%,#fcfdfe 12%,#d7def0 44%,#d7def0 56%,#d7def0 56%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfdfe', endColorstr='#d7def0',GradientType=0 ); /* IE6-9 */
+  margin: 0px;
+  border-bottom: 1px solid #ccc;
+  padding: 1px 0 1px 3px;
+}
+.keyShortcut {
+  text-decoration: underline;
+}
+input#numbersArea {
+  background: #e6effb; /* Old browsers */
+  background: -moz-linear-gradient(top,  #e6effb 0%, #edf4fc 18%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6effb), color-stop(18%,#edf4fc), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #e6effb 0%,#edf4fc 18%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #e6effb 0%,#edf4fc 18%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #e6effb 0%,#edf4fc 18%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #e6effb 0%,#edf4fc 18%,#ffffff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6effb', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  border: 1px solid #729090;
+  font-family: Consolas;
+  width: 92%;
+  height: 37px;
+  margin: 10px 10px 5px 10px;
+  padding: 10px 10px 0 0;
+  font-size: 24px;
+  outline: none;
+}
+#bits {
+  width: 93.8%;
+  margin-left: 10px;
+  padding: 1px;
+}
+#bits ul {
+  padding: 0;
+  margin: 0;
+}
+#bits ul li {
+  font-family: Consolas;
+  list-style: none;
+  display: inline;
+  margin-left: 16px;
+}
+li.bitPosition {
+  color: #afbac7;
+}
+#left {
+  padding: 0 0 0 10px;
+  float: left;
+}
+.numeralSystems {
+  margin-top: 5px;
+  padding: 5px 0 4px 3px;
+  width: 65px;
+}
+.numeralSystems span {
+  display: block;
+  margin-bottom: 1px;
+}
+/*Buttons*/
+#buttons {
+  display: inline-block;
+  float: left;
+}
+.row {
+  margin: 5px 0 0 5px;
+}
+button {
+  padding: 0;
+  margin-right: 2px;
+  font-family: Segoe UI;
+  height: 27px;
+  width: 35px;
+  color: #1E395B;
+  outline: none;
+}
+button:hover {
+  background: #fef4c5; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fef4c5 0%, #fce3c7 47%, #e6dd83 52%, #fbeb8d 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fef4c5), color-stop(47%,#fce3c7), color-stop(52%,#e6dd83), color-stop(100%,#003300)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #fef4c5 0%,#fce3c7 47%,#e6dd83 52%,#003300 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #fef4c5 0%,#fce3c7 47%,#e6dd83 52%,#fbeb8d 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #fef4c5 0%,#fce3c7 47%,#e6dd83 52%,#fbeb8d 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #fef4c5 0%,#fce3c7 47%,#e6dd83 52%,#fbeb8d 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef4c5', endColorstr='#fbeb8d',GradientType=0 ); /* IE6-9 */
+  border: 1px solid #F7DD34;
+}
+button:active {
+  background: #f3e074; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f3e074 0%, #f5bb57 52%, #f5bb57 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3e074), color-stop(52%,#f5bb57), color-stop(100%,#FFFF00)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f3e074 0%,#f5bb57 52%,#FFFF00 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f3e074 0%,#f5bb57 52%,#f5bb57 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f3e074 0%,#f5bb57 52%,#f5bb57 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f3e074 0%,#f5bb57 52%,#f5bb57 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e074', endColorstr='#f5bb57',GradientType=0 ); /* IE6-9 */
+  border: 1px solid #c29b29;
+}
+.special {
+  padding: 0;
+  line-height: 27px;
+   font-size: 11px;
+  background: #f6fafe; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f6fafe 0%, #edf3f8 49%, #e7edf5 50%, #d7e2ef 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6fafe), color-stop(49%,#edf3f8), color-stop(50%,#e7edf5), color-stop(100%,#CCFF66)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f6fafe 0%,#edf3f8 49%,#e7edf5 50%,#CCFF66 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f6fafe 0%,#edf3f8 49%,#e7edf5 50%,#d7e2ef 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f6fafe 0%,#edf3f8 49%,#e7edf5 50%,#d7e2ef 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f6fafe 0%,#edf3f8 49%,#e7edf5 50%,#d7e2ef 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6fafe', endColorstr='#d7e2ef',GradientType=0 ); /* IE6-9 */
+  border: 1px solid #8797AA;
+}
+.disabled {
+  border: 1px solid #B4C2D1;
+  background-color: #D9E4F1;
+}
+#zero {
+  width: 75px;
+}
+#equals {
+  margin-top: 5px;
+  float: right;
+  height: 59px;
+}
+    </style>
+  </head>
+  <body>
+  	<div id="windowsCalculator">
+  		<div id="inner">
+  			<ul id="menu">
+  				<li>
+  					<span class="keyShortcut">V</span>iew
+  				</li>
+  				<li>
+  					<span class="keyShortcut">E</span>dit
+  				</li>
+  				<li>
+  					<span class="keyShortcut">H</span>elp
+  				</li>
+  			</ul>
+  			<input type="text" value="8854455" id="numbersArea" class="border" dir="rtl"/>
+  			<div id="bits" class="border">
+  				<ul>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  				</ul>
+  				<ul class="bitPosition">
+  					<li>63&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>47&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;32</li>
+  				</ul>
+  				<ul>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  					<li>0000</li>
+  				</ul>
+  				<ul class="bitPosition">
+  					<li>31&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>15&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  					<li>&nbsp;&nbsp;&nbsp;0</li>
+  				</ul>
+  			</div>
+  			<div id="left">
+  				<div class="numeralSystems border">
+  					<span><input type="radio" name="numeralSystem" />Hex</span>
+  					<span><input type="radio" name="numeralSystem" checked />Dec</span>
+  					<span><input type="radio" name="numeralSystem" />Oct</span>
+  					<span><input type="radio" name="numeralSystem" />Bin</span>
+  				</div>
+  				<div class="numeralSystems border">
+  					<span><input type="radio" name="bitsLength" checked/>Qword</span>
+  					<span><input type="radio" name="bitsLength"  />Dword</span>
+  					<span><input type="radio" name="bitsLength" />Word</span>
+  					<span><input type="radio" name="bitsLength" />Byte</span>
+  				</div>
+  			</div>
+  			<div id="buttons">
+  				<div class="row">
+  					<button class="border disabled">&nbsp;</button>
+  					<button class="border special">Mod</button>
+  					<button class="border disabled">A</button>
+  					<button class="border disabled">MC</button>
+  					<button class="border disabled">MR</button>
+  					<button class="border disabled">MS</button>
+  					<button class="border disabled">M+</button>
+  					<button class="border disabled">M-</button>
+  				</div>
+  				<div class="row">
+  					<button class="border special">(</button>
+  					<button class="border special">)</button>
+  					<button class="border disabled">B</button>
+  					<button class="border special">&larr;</button>
+  					<button class="border special">CE</button>
+  					<button class="border special">C</button>
+  					<button class="border special">&#177;</button>
+  					<button class="border disabled">&#8730;</button>
+  				</div>
+  				<div class="row">
+  					<button class="border special">RoL</button>
+  					<button class="border special">RoR</button>
+  					<button class="border disabled">C</button>
+  					<button class="border">7</button>
+  					<button class="border">8</button>
+  					<button class="border">9</button>
+  					<button class="border special">/</button>
+  					<button class="border disabled">%</button>
+  				</div>
+  				<div class="row">
+  					<button class="border special">Or</button>
+  					<button class="border special">Xor</button>
+  					<button class="border disabled">D</button>
+  					<button class="border">4</button>
+  					<button class="border">5</button>
+  					<button class="border">6</button>
+  					<button class="border special">*</button>
+  					<button class="border disabled">1/&chi;</button>
+  				</div>
+  				<button id="equals" class="border special">=</button>
+  				<div class="row">
+  					<button class="border special">Lsh</button>
+  					<button class="border special">Rsh</button>
+  					<button class="border disabled">E</button>
+  					<button class="border">1</button>
+  					<button class="border">2</button>
+  					<button class="border">3</button>
+  					<button class="border special">-</button>
+  				</div>
+  				<div class="row">
+  					<button class="border special">Not</button>
+  					<button class="border special">And</button>
+  					<button class="border disabled">F</button>
+  					<button id="zero" class="border">0</button>
+  					<button class="border disabled">.</button>
+  					<button class="border special">+</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </body>
+</html>
