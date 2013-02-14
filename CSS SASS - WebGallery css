@@ -1,0 +1,44 @@
+body, input, button, label, p, nav, ul, li, a, span, strong, em {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ body {
+ background: #d593ff;
+ }
+ form {
+ background: #d593ff;
+  background: -moz-linear-gradient(top, #d593ff 13%, #c68cf2 17%, #a439f4 26%, #8f1aef 31%, #9215f2 34%, #9215f2 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(13%, #d593ff), color-stop(17%, #c68cf2), color-stop(26%, #a439f4), color-stop(31%, #8f1aef), color-stop(34%, #9215f2), color-stop(100%, #9215f2));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d593ff 13%, #c68cf2 17%, #a439f4 26%, #8f1aef 31%, #9215f2 34%, #9215f2 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #d593ff 13%, #c68cf2 17%, #a439f4 26%, #8f1aef 31%, #9215f2 34%, #9215f2 100%) fixed;
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #d593ff 13%, #c68cf2 17%, #a439f4 26%, #8f1aef 31%, #9215f2 34%, #9215f2 100%) fixed;
+  /* IE10+ */
+  background: linear-gradient(to bottom, #d593ff 13%, #c68cf2 17%, #a439f4 26%, #8f1aef 31%, #9215f2 34%, #9215f2 100%) fixed;
+  /* W3C */
+ } 
+  
+.mini-gallery ul li {
+  display: inline-block;
+  margin: 5px; }
+  .mini-gallery ul li:hover > img {
+    cursor: hand; }
+
+.hidden {
+  margin: 5px;
+  display: inline-block;
+  position: absolute;
+  opacity: 0; }
+
+.large-gallery input[type="radio"] {
+  display: none; }
+  .large-gallery input[type="radio"]:checked + .hidden {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; }
